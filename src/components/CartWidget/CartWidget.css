@@ -1,0 +1,9 @@
+.CartIcon {
+    width: 35px;
+}
+
+#basic-cart-button{
+    background-color: transparent;
+    padding: 16px 17px 17px 14px;
+    border-radius: 100px;
+}
