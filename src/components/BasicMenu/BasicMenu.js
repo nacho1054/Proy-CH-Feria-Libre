@@ -3,6 +3,7 @@ import "./BasicMenu.css";
 import Button from '@mui/material/Button';
 import Menu from '@mui/material/Menu';
 import MenuItem from '@mui/material/MenuItem';
+import {Link} from "react-router-dom";
 
 
 export default function BasicMenu() {
@@ -35,16 +36,16 @@ export default function BasicMenu() {
           'aria-labelledby': 'basic-button',
         }}
       >
-        <MenuItem onClick={handleClose}>Vehículos</MenuItem>
-        <MenuItem onClick={handleClose}>Inmuebles</MenuItem>
-        <MenuItem onClick={handleClose}>Supermercado</MenuItem>
-        <MenuItem onClick={handleClose}>Tecnología</MenuItem>
-        <MenuItem onClick={handleClose}>Hogar y Muebles</MenuItem>
-        <MenuItem onClick={handleClose}>Electrodomésticos</MenuItem>
-        <MenuItem onClick={handleClose}>Herramientas</MenuItem>
-        <MenuItem onClick={handleClose}>Construcción</MenuItem>
-        <MenuItem onClick={handleClose}>Deportes y Fitness</MenuItem>
-        <MenuItem onClick={handleClose}>Otros</MenuItem>
+        <MenuItem onClick={handleClose}><Link to={`/category/Vehiculos`} className="Link">Vehículos </Link></MenuItem>
+        <MenuItem onClick={handleClose}><Link to={`/category/Inmuebles`} className="Link">Inmuebles </Link></MenuItem>
+        <MenuItem onClick={handleClose}><Link to={`/category/Supermercado`} className="Link">Supermercado </Link></MenuItem>
+        <MenuItem onClick={handleClose}><Link to={`/category/Tecnologia`} className="Link">Tecnología </Link></MenuItem>
+        <MenuItem onClick={handleClose}><Link to={`/category/Hogar y Muebles`} className="Link">Hogar y Muebles </Link></MenuItem>
+        <MenuItem onClick={handleClose}><Link to={`/category/Electrodomesticos`} className="Link">Electrodomésticos </Link></MenuItem>
+        <MenuItem onClick={handleClose}><Link to={`/category/Herramientas`} className="Link">Herramientas </Link></MenuItem>
+        <MenuItem onClick={handleClose}><Link to={`/category/Construccion`} className="Link">Construcción </Link></MenuItem>
+        <MenuItem onClick={handleClose}><Link to={`/category/Deportes y Fitness`} className="Link">Deportes y Fitness </Link></MenuItem>
+        <MenuItem onClick={handleClose}><Link to={`/category/Otros`} className="Link">Otros </Link></MenuItem>
       </Menu>
     </div>
   );

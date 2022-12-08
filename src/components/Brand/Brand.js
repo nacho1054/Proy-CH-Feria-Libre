@@ -1,9 +1,12 @@
 import "./Brand.css"
+import {Link} from "react-router-dom";
 
 const Brand = () => {
     return(
         <div className="Brand">
-            <h1 className="Brand_Feria">Feria Libre</h1>
+            <Link to={`/`} className="LinkToHome">
+                <h1 className="Brand_Feria">Feria Libre</h1>
+            </Link>
         </div>
     );
 }
