@@ -1,0 +1,28 @@
+.root {
+    padding: 32px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.content {
+    padding: 16px;
+}
+
+.mainImage {
+    border-radius: 4px;
+    max-width: 100%;
+    max-height: 100%;
+}
+
+.information {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    height: 100%;
+}
+
+.priceInfo {
+    display: flex;
+    justify-content: space-between;
+}

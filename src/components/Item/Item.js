@@ -1,15 +1,10 @@
 import { Link } from 'react-router-dom';
-import Card from '../Card/Card';
+import Card from '../Card/Card'
 
+const Item = ({item}) => {
 
-const Item = (props) => {
   return (
-    <div>
-        <Link to={`/item/${props.productId}`}>
-                <div>{props.title}</div>
-                <img src={props.photo} alt={props.title} />
-        </Link>
-    </div>
+    <Card product={item} />
   )
 }
 

@@ -1,0 +1,24 @@
+.CartIcon {
+    width: 35px;
+}
+
+.basic-cart-button {
+    position: relative;
+    background-color: transparent;
+    padding: 16px 17px 17px 14px;
+    border-radius: 50%;
+}
+
+.cartSize {
+    border-radius: 50%;
+    background-color: red;
+    width: 18px;
+    height: 18px;
+    color: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: absolute;
+    top: 0;
+    right: 0;
+}

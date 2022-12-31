@@ -1,39 +1,25 @@
-import Card from "../Card/Card";
 import "./ItemDetailContainer.css";
-import productsList from "../../ProductsAPI/ProductsAPI";
 import { useState, useEffect } from "react";
-import FetchItem from "../../fetchItem/FetchItem";
+import { fetchSingleItem } from "../../fetchItem/FetchItem";
 import ItemDetail from "../ItemDetail/ItemDetail";
+import { useParams } from "react-router-dom";
 
 function ItemDetailContainer() {
-    const [dato, setDato] = useState({});
+    const { idItem } = useParams()
+    const [item, setItem] = useState(null)
 
     useEffect(() => {
-        FetchItem(2000, productsList[0])
-        .then(result => setDato(result))
-        .catch(err => console.log(err))
-    }, []);
+        const loadItem = async () => {
+            const item = await fetchSingleItem(idItem)
+            setItem(item)
+        }
 
+        loadItem()
+    }, [])
 
     return(
-        <ItemDetail item= {dato} />
+        <ItemDetail item={item} />
     );
-
-    /*
-    return(
-        <div className="ItemDetailContainer">
-            {productsList.map((product, i)=> (
-                <Card
-                title = {product.title}
-                photo = {product.photo}
-                description = {product.description}
-                price = {product.price}
-                category = {product.category}
-            />
-            ))}
-        </div>
-    )
-    */
 };
 
 export default ItemDetailContainer;
